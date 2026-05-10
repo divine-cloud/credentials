@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Corizo Credential - Pavitra Sharma</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Roboto',sans-serif;
+}
+
+body{
+    background:#efefef;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+.header{
+    width:100%;
+    height:48px;
+    background:#6b18b4;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 28px;
+    color:white;
+    font-size:13px;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.header-left{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.header-logo{
+    width:28px;
+    height:28px;
+    border-radius:4px;
+    object-fit:cover;
+    background:white;
+}
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    font-weight:500;
+}
+
+.clickable{
+    cursor:pointer;
+}
+
+/* MAIN */
+
+.main{
+    width:100%;
+    padding:40px 0 80px;
+}
+
+/* TOP SECTION */
+
+.top-grid{
+    width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+}
+
+/* CERTIFICATE */
+
+.certificate-box{
+    width:100%;
+    background:white;
+    border-radius:14px;
+    padding:18px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.06);
+}
+
+.certificate-box img{
+    width:100%;
+    border-radius:4px;
+    display:block;
+}
+
+/* DETAILS */
+
+.details-box{
+    width:100%;
+    background:white;
+    border-radius:14px;
+    padding:28px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.06);
+}
+
+.details-box h2{
+    font-size:20px;
+    margin-bottom:28px;
+}
+
+.flex-row{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.info-block{
+    display:flex;
+    gap:14px;
+    align-items:center;
+}
+
+/* ISSUER PROFILE IMAGE */
+
+.issuer-img{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* RECEIVER PROFILE */
+
+.avatar{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:#efefef;
+    border:1px solid #d9d9d9;
+    position:relative;
+}
+
+.avatar::before{
+    content:'';
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:#c9c9c9;
+    position:absolute;
+    top:8px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.avatar::after{
+    content:'';
+    width:24px;
+    height:12px;
+    border-radius:12px 12px 0 0;
+    background:#c9c9c9;
+    position:absolute;
+    bottom:8px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.label{
+    font-size:12px;
+    color:#666;
+    margin-bottom:4px;
+}
+
+.bold{
+    font-weight:500;
+    font-size:15px;
+}
+
+.small{
+    font-size:13px;
+    color:#777;
+}
+
+/* VERIFIED BADGE */
+
+.verified{
+    color:#1d9bf0;
+    font-size:14px;
+    margin-left:4px;
+}
+
+/* SOCIAL */
+
+.social{
+    text-align:right;
+}
+
+.icons{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:10px;
+    justify-content:flex-end;
+}
+
+.circle{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#f2f2f2;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.circle:hover{
+    transform:scale(1.08);
+}
+
+.linkedin-btn{
+    background:#2b73d9;
+    color:white;
+    border:none;
+    height:36px;
+    padding:0 16px;
+    border-radius:22px;
+    font-size:13px;
+    font-weight:500;
+    cursor:pointer;
+}
+
+/* TEXT */
+
+.text{
+    margin-top:28px;
+    color:#666;
+    line-height:1.9;
+    font-size:14px;
+}
+
+/* SECOND CARD */
+
+.second-card{
+    width:700px;
+    margin:24px auto;
+    background:white;
+    border-radius:14px;
+    padding:28px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.06);
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.section{
+    margin-bottom:30px;
+}
+
+.section h4{
+    font-size:13px;
+    margin-bottom:12px;
+}
+
+.link{
+    color:#4980ff;
+    font-size:14px;
+}
+
+.gray{
+    color:#666;
+    font-size:14px;
+}
+
+.linkedin-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:12px;
+}
+
+.outline-btn{
+    height:40px;
+    border-radius:24px;
+    border:1px solid #2c73d9;
+    background:white;
+    color:#2c73d9;
+    padding:0 18px;
+    font-size:13px;
+    cursor:pointer;
+}
+
+.print-btn{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    border:1px solid #bbb;
+    background:white;
+    cursor:pointer;
+}
+
+.input{
+    width:100%;
+    height:42px;
+    border-radius:22px;
+    background:#f3f3f3;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 18px;
+    color:#777;
+    font-size:13px;
+}
+
+.copy{
+    background:#ddd;
+    border-radius:14px;
+    padding:5px 10px;
+    font-size:12px;
+    color:#222;
+    cursor:pointer;
+}
+
+.learn{
+    width:100%;
+    margin-top:24px;
+    height:44px;
+    border:none;
+    border-radius:24px;
+    background:#e44335;
+    color:white;
+    font-weight:500;
+    cursor:pointer;
+}
+
+/* AUTH */
+
+.auth-card{
+    width:700px;
+    margin:auto;
+    background:white;
+    border-radius:14px;
+    padding:28px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.06);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.auth-card h3{
+    margin-bottom:16px;
+}
+
+.auth-card p{
+    color:#777;
+    margin-top:8px;
+    font-size:14px;
+}
+
+.verify-btn{
+    background:#55d861;
+    color:white;
+    border:none;
+    padding:14px 34px;
+    border-radius:28px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+/* POPUP */
+
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:99999;
+}
+
+.popup-box{
+    width:355px;
+    background:white;
+    border-radius:12px;
+    padding:26px;
+}
+
+.popup-item{
+    display:flex;
+    gap:14px;
+    margin-bottom:24px;
+}
+
+.tick{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    background:#f3f3f3;
+    color:#58d463;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.popup-label{
+    font-size:11px;
+    color:#666;
+    margin-bottom:3px;
+}
+
+.popup-value{
+    font-size:15px;
+    font-weight:500;
+    color:#444;
+}
+
+.hash{
+    width:220px;
+    font-size:11px;
+    color:#666;
+    line-height:1.6;
+    word-break:break-all;
+}
+
+.verified-bottom{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:12px;
+}
+
+.verified-icon{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#5add63;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.verified-text{
+    color:#52cf5d;
+    font-size:22px;
+    font-weight:700;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.top-grid,
+.second-card,
+.auth-card{
+    width:95%;
+}
+
+.grid{
+    grid-template-columns:1fr;
+}
+
+.flex-row{
+    flex-direction:column;
+}
+
+.social{
+    text-align:left;
+}
+
+.icons{
+    justify-content:flex-start;
+}
+
+.header{
+    padding:0 12px;
+    font-size:11px;
+}
+
+.header-right{
+    gap:10px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+
+    <div class="header-left">
+
+        <!-- CORIZO HEADER LOGO -->
+        <a href="https://corizo.in/"><img src="corizo-logo.png" class="header-logo"></a>
+
+        <div>
+            Internship Certificate Corizo
+        </div>
+
+    </div>
+
+    <div class="header-right">
+
+        <div class="clickable" onclick="window.print()">
+            🖨 PRINT
+        </div>
+
+        <div class="clickable">
+            🔒 Manage My Wallet
+        </div>
+
+    </div>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+    <div class="top-grid">
+
+        <!-- CERTIFICATE -->
+
+        <div class="certificate-box">
+
+            <!-- CERTIFICATE IMAGE -->
+            <img src="Pavitra Sharma_CRZ129187.JPG" alt="Certificate">
+
+        </div>
+
+        <!-- DETAILS -->
+
+        <div class="details-box">
+
+            <h2>Internship Certificate Corizo</h2>
+
+            <div class="flex-row">
+
+                <!-- ISSUER -->
+
+                <div class="info-block">
+
+                    <!-- CORIZO PROFILE IMAGE -->
+                    <img src="corizo-logo.png" class="issuer-img">
+
+                    <div>
+
+                        <div class="label">
+                            Credential Issuer
+                        </div>
+
+                        <div class="bold">
+
+                            Corizo Edutech
+
+                            <span class="verified">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </span>
+
+                        </div>
+
+                        <div class="small">
+                            Organization
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RECEIVER -->
+
+                <div class="info-block">
+
+                    <div class="avatar"></div>
+
+                    <div>
+
+                        <div class="label">
+                            Receiver
+                        </div>
+
+                        <div class="bold">
+                            Pavitra Sharma
+                        </div>
+
+                        <div class="small">
+                            Individual
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- SOCIAL -->
+
+                <div class="social">
+
+                    <div class="label">
+                        Share your success on social media
+                    </div>
+
+                    <div class="icons">
+
+                        <!-- FACEBOOK -->
+
+                        <div class="circle"
+                        onclick="shareFacebook()">
+
+                            <i class="fa-brands fa-facebook-f"></i>
+
+                        </div>
+
+                        <!-- X -->
+
+                        <div class="circle"
+                        onclick="shareTwitter()">
+
+                            <i class="fa-brands fa-x-twitter"></i>
+
+                        </div>
+
+                        <!-- WHATSAPP -->
+
+                        <div class="circle"
+                        onclick="shareWhatsapp()">
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                        </div>
+
+                        <!-- LINKEDIN -->
+
+                        <button class="linkedin-btn"
+                        onclick="shareLinkedin()">
+
+                            Post on LinkedIn
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- TEXT -->
+
+            <div class="text">
+
+                Congratulations on Successfully Completing Your Internship with Corizo!
+
+                <br><br>
+
+                We are delighted to congratulate you on the successful completion of your internship at Corizo.
+                This milestone marks an important step in your professional journey.
+
+                <br><br>
+
+                During your internship, you were exposed to real-world challenges and actively contributed to meaningful projects.
+
+                <br><br>
+
+                This certificate of internship is a token of appreciation and recognition for your efforts and dedication.
+
+                <br><br>
+
+                Once again, congratulations on this well-deserved accomplishment.
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SECOND CARD -->
+
+    <div class="second-card">
+
+        <div class="grid">
+
+            <div>
+
+                <div class="section">
+
+                    <h4>Website Link</h4>
+
+                    <div class="link">
+                        https://corizo.in/
+                    </div>
+
+                </div>
+
+                <div class="section">
+
+                    <h4>Build your LinkedIn Profile</h4>
+
+                    <div class="linkedin-area">
+
+                        <button class="outline-btn"
+                        onclick="shareLinkedin()">
+
+                            + Add to LinkedIn Profile
+
+                        </button>
+
+                        <button class="print-btn"
+                        onclick="window.print()">
+
+                            🖨
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <div class="section">
+
+                    <h4>Issued on</h4>
+
+                    <div class="gray">
+                        27, Apr 2026
+                    </div>
+
+                </div>
+
+                <div class="section">
+
+                    <h4>Credential Link</h4>
+
+                    <div class="input">
+
+                        <span>
+                            https://credentials.corizo.in/credential/d02d1020-8a6d
+                        </span>
+
+                        <span class="copy"
+                        onclick="copyCredential()">
+
+                            COPY
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="learn"
+        onclick="window.open('https://corizo.in/','_blank')">
+
+            Learn more about this credential
+
+        </button>
+
+    </div>
+
+    <!-- AUTH -->
+
+    <div class="auth-card">
+
+        <div>
+
+            <h3>
+                Credential Authenticity
+            </h3>
+
+            <p>
+                Technology: Hedera Hashgraph
+            </p>
+
+            <p>
+                Transaction Hash:
+                4c8f061e425efca933af831aba377f8ccac6ce972083d0e1e00b962a25bf...
+            </p>
+
+            <p>
+                Issued on: 27, Apr 2026
+            </p>
+
+        </div>
+
+        <button class="verify-btn"
+        onclick="openPopup()">
+
+            VERIFY CREDENTIAL
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- POPUP -->
+
+<div class="popup" id="verifyPopup">
+
+    <div class="popup-box">
+
+        <div class="popup-item">
+
+            <div class="tick">✓</div>
+
+            <div>
+                <div class="popup-label">Recipient Name</div>
+                <div class="popup-value">Pavitra Sharma</div>
+            </div>
+
+        </div>
+
+        <div class="popup-item">
+
+            <div class="tick">✓</div>
+
+            <div>
+                <div class="popup-label">Issuer Name</div>
+                <div class="popup-value">Corizo Edutech</div>
+            </div>
+
+        </div>
+
+        <div class="popup-item">
+
+            <div class="tick">✓</div>
+
+            <div>
+                <div class="popup-label">Credential Title</div>
+                <div class="popup-value">Internship Certificate Corizo</div>
+            </div>
+
+        </div>
+
+        <div class="popup-item">
+
+            <div class="tick">✓</div>
+
+            <div>
+                <div class="popup-label">Issuance Date</div>
+                <div class="popup-value">27 April 2026</div>
+            </div>
+
+        </div>
+
+        <div class="popup-item">
+
+            <div class="tick">✓</div>
+
+            <div>
+                <div class="popup-value">
+                    Active, Not Expired
+                </div>
+            </div>
+
+        </div>
+
+        <div class="popup-item">
+
+            <div class="tick">✓</div>
+
+            <div>
+
+                <div class="popup-label">
+                    Verified on Blockchain
+                </div>
+
+                <div class="hash">
+                    4c8f061e425efca933af831aba377f8ccac6ce972083d0e1e00b962a25bf...
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="verified-bottom">
+
+            <div class="verified-icon">
+                ✓
+            </div>
+
+            <div class="verified-text">
+                Verified Credential
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function openPopup(){
+
+    document.getElementById("verifyPopup").style.display = "flex";
+
+}
+
+window.onclick = function(e){
+
+    const popup = document.getElementById("verifyPopup");
+
+    if(e.target === popup){
+        popup.style.display = "none";
+    }
+
+}
+
+function copyCredential(){
+
+    const text =
+    "https://credentials.corizo.in/credential/d02d1020-8a6d";
+
+    navigator.clipboard.writeText(text);
+
+    alert("Credential Link Copied");
+
+}
+
+/* SOCIAL SHARE */
+
+function shareFacebook(){
+
+    const url =
+    "https://credentials.corizo.in/credential/d02d1020";
+
+    window.open(
+    `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+    "_blank"
+    );
+
+}
+
+function shareTwitter(){
+
+    const text =
+    "I successfully completed my Internship Certificate from Corizo.";
+
+    const url =
+    "https://credentials.corizo.in/credential/d02d1020";
+
+    window.open(
+    `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
+    "_blank"
+    );
+
+}
+
+function shareWhatsapp(){
+
+    const text =
+    "Check out my verified internship credential from Corizo!";
+
+    window.open(
+    `https://wa.me/?text=${encodeURIComponent(text)}`,
+    "_blank"
+    );
+
+}
+
+function shareLinkedin(){
+
+    const url =
+    "https://credentials.corizo.in/credential/d02d1020";
+
+    window.open(
+    `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+    "_blank"
+    );
+
+}
+
+</script>
+
+</body>
+</html>
